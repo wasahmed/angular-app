@@ -1,0 +1,5 @@
+<ul *ngIf="photo$ | async as photos"> <!-- this will take an observable list of movies and async pipe will unwrap the observable and angular will take care of the subscriptions-->
+    <li *ngFor="let photo of photos">
+        <p>{{ photo.title }}</p>
+    </li>
+  </ul>
